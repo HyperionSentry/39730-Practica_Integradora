@@ -1,0 +1,50 @@
+{{!-- {{#if product.length}}
+<h2>Menú</h2>
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+        {{#each product}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>${{this.price}}</td>
+            <td><img width="100" src={{this.thumbnail}} alt="not found"></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+{{else}}
+<h3>No hay productos</h3>
+{{/if}} --}}
+
+
+
+
+
+
+
+<div>
+    Chat con WebSockets 
+</div>
+
+<div>
+   <input id="chatBox"></input>
+</div>
+
+<div>
+   <p id="messageLogs"></p>
+</div>
+
+
+<p id="message"></p>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/home.js"></script>
+
+<script>
+     const sockets=io.connect('http://localhost:8080/',
+    {forceNew:true});
+</script>
